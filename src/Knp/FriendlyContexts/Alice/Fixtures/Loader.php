@@ -63,8 +63,8 @@ class Loader extends BaseLoader
     public function getCache()
     {
         $cache = [];
-        foreach ($this->fixtureSet->getFixtures() as $fixture) {
-            $spec = [];
+        foreach ($this->fixtureSet->getFixtures() as $fixtureId => $fixture) {
+            $spec = [$fixtureId];
             foreach ($fixture->getSpecs()->getProperties()->getIterator() as $property) {
                 $spec[] = $property->getValue();
             }
