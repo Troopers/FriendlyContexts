@@ -36,6 +36,12 @@ services:
         tags:
             - { name: friendly.format.guesser }
 
+    friendly.guesser.datetime_immutable:
+        class: Knp\FriendlyContexts\Guesser\DateTimeImmutableGuesser
+        public: true
+        tags:
+            - { name: friendly.format.guesser }
+
     friendly.guesser.string:
         class: Knp\FriendlyContexts\Guesser\StringGuesser
         public: true
